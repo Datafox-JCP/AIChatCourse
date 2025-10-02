@@ -74,6 +74,8 @@ struct WelcomeView: View {
                 Text("Política de Privacidad")
             }
         }
+        .underline()
+        .font(.caption)
     }
 }
 
