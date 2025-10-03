@@ -10,20 +10,17 @@ import SwiftUI
 struct TabBarView: View {
     var body: some View {
         TabView {
-            ExploreView()
-                .tabItem {
-                    Label("Explore", systemImage: "eyes")
-                }
+            Tab("Explorar", systemImage: "eyes") {
+                ExploreView()
+            }
             
-            ChatsView()
-                .tabItem {
-                    Label("Chats", systemImage: "bubble.left.and.bubble.right")
-                }
+            Tab("Chats", systemImage: "bubble.left.and.bubble.right") {
+                ChatsView()
+            }
             
-            ProfileView()
-                .tabItem {
-                    Label("Profile", systemImage: "person.fill")
-                }
+            Tab("Perfil", systemImage: "person.fill") {
+                ProfileView()
+            }
         }
     }
 }

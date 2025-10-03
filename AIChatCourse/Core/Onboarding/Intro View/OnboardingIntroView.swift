@@ -11,9 +11,9 @@ struct OnboardingIntroView: View {
     var body: some View {
         VStack {
             Group {
-                Text("¡Crea tus propios")
+                Text("¡Crea tus propios ")
                 +
-                Text("avatars")
+                Text("avatares")
                     .foregroundStyle(.accent)
                     .fontWeight(.semibold)
                 +

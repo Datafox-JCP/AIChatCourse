@@ -13,8 +13,8 @@ struct ProfileView: View {
     
     var body: some View {
         NavigationStack {
-            Text("Profile")
-                .navigationTitle("Profile")
+            Text("Perfil")
+                .navigationTitle("Perfil")
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
                         settingsButton
@@ -22,7 +22,7 @@ struct ProfileView: View {
                 }
         }
         .sheet(isPresented: $showSettingsView) {
-            Text("Settings")
+            Text("Ajustes")
         }
     }
     

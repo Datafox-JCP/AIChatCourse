@@ -18,10 +18,10 @@ struct SettingsView: View {
                 Button {
                     onSignedOutPressed()
                 } label: {
-                    Text("Sign Out")
+                    Text("Cerrar sesión")
                 }
             }
-            .navigationTitle("Settings")
+            .navigationTitle("Ajustes")
         }
     }
     
