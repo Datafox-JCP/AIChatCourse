@@ -29,10 +29,10 @@ struct ProfileView: View {
             }
         }
         .sheet(isPresented: $showSettingsView) {
-            Text("Ajustes")
+            SettingsView()
         }
         .fullScreenCover(isPresented: $showCreateAvatarView) {
-            Text("Crear avatar")
+            CreateAvatarView()
         }
         .task {
             await loadData()

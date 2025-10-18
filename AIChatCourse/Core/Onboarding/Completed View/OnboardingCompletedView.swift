@@ -29,7 +29,11 @@ struct OnboardingCompletedView: View {
         }
         .frame(maxHeight: .infinity)
         .safeAreaInset(edge: .bottom, content: {
-            ctaButton
+            AsyncCallToActionButton(
+                isLoading: isCompletingProfileSetup,
+                title: "Terminar") {
+                    onFinishButtonPressed()
+                }
         })
         .padding(24)
         .toolbar(.hidden, for: .navigationBar)
@@ -43,22 +47,6 @@ struct OnboardingCompletedView: View {
             isCompletingProfileSetup = false
             root.updateViewState(showTabBarView: true)
         }
-    }
-    
-    private var ctaButton: some View {
-        ZStack {
-            if isCompletingProfileSetup {
-                ProgressView()
-                    .tint(.white)
-            } else {
-                Text("Terminar")
-            }
-        }
-        .callToActionButton()
-        .anyButton(.press) {
-            onFinishButtonPressed()
-        }
-        .disabled(isCompletingProfileSetup)
     }
 }
 
