@@ -25,6 +25,11 @@ struct ExploreView: View {
             } // List
             .navigationTitle("Explorar")
         } // Nav
+        .toolbar {
+            ToolbarItem {
+                Text("Hello")
+            }
+        }
     }
     
     private var featuredSection: some View {
@@ -94,5 +99,7 @@ struct ExploreView: View {
 }
 
 #Preview {
-    ExploreView()
+    NavigationStack {
+        ExploreView()
+    }
 }
