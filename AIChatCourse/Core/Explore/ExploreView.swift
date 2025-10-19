@@ -17,13 +17,24 @@ struct ExploreView: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                featuredSection
-                categorySection
-                popularSection
-                
-            } // List
-            .navigationTitle("Explorar")
+            if #available(iOS 26.0, *) {
+                List {
+                    featuredSection
+                    categorySection
+                    popularSection
+                    
+                } // List
+                .scrollEdgeEffectStyle(.soft, for: .top)
+                .navigationTitle("Explorar")
+            } else {
+                List {
+                    featuredSection
+                    categorySection
+                    popularSection
+                    
+                } // List
+                .navigationTitle("Explorar")
+            }
         } // Nav
         .toolbar {
             ToolbarItem {
